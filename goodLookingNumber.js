@@ -1,8 +1,13 @@
 export const goodLookingNumber = (num) => {
     let Num = num.toString().split("").reverse();
+
+    if (num < 0) {
+        Num.pop();
+    }
+
     Num = Num.map((num, ind) => {
         if (Num.length > 3) {
-            if (ind % 3 === 0) {
+            if (ind !== 0 && ind % 3 === 0) {
                 return num + ".";
             }
         }
@@ -10,6 +15,13 @@ export const goodLookingNumber = (num) => {
     })
         .reverse()
         .join("");
-    Num = Num.slice(0, -1);
+
+    if (num < 0) {
+        Num = "-" + Num;
+    }
+
+    if (Math.abs(Num) === 0) {
+        Num = "";
+    }
     return Num;
 };
