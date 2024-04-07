@@ -1,0 +1,13 @@
+.typeAnimation {
+    display: inline-block;
+    border-right: 2px solid black;
+    padding-inline-end: 4px;
+    animation: pulse 0.6s infinite alternate;
+    min-height: 1rem;
+}
+
+@keyframes pulse {
+    to {
+        border-color: transparent;
+    }
+}
