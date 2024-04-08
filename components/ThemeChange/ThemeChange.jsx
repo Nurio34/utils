@@ -1,5 +1,5 @@
-import { useGlobalContext } from "../../../GlobalApp";
-import { Moon, Sun } from "../../../assets/icons";
+import { useGlobalContext } from "../../../Pages/6-MarkdownBlog/GlobalApp";
+import { Moon, Sun } from "./assets/icons";
 import { motion } from "framer-motion";
 function ThemeChange() {
     const { isThemeLight, setIsThemeLight } = useGlobalContext();

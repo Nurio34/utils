@@ -1,26 +1,22 @@
 //TODO : type animation fonksiyonu oluştur.
 
-function typeAnimation(string, element) {
-    let index = -1;
-    let status = "increasing";
+export function typeAnimation(string, element) {
+    if (string && element) {
+        element.classList.add("typeAnimation");
 
-    const interval = setInterval(() => {
-        if (index >= 0) {
+        let index = 0;
+
+        const interval = setInterval(() => {
             element.textContent = string.slice(0, index);
-        }
-        if (index >= -1 && status === "increasing") {
             index++;
-        }
-        if (index <= string.length + 1 && status === "decreasing") {
-            index--;
-        }
 
-        if (index === -1) status = "increasing";
-
-        if (index === string.length + 1) status = "decreasing";
-    }, 600);
-
-    element.classList.add("typeAnimation");
+            if (index === string.length + 1) {
+                clearInterval(interval);
+                element.classList.remove("typeAnimation");
+            }
+            console.log(index);
+        }, 300);
+    }
 }
 
 const p = document.querySelector(".p");
