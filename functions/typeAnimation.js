@@ -14,7 +14,6 @@ export function typeAnimation(string, element) {
                 clearInterval(interval);
                 element.classList.remove("typeAnimation");
             }
-            console.log(index);
         }, 300);
     }
 }

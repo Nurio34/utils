@@ -2,11 +2,11 @@
     display: inline-block;
     border-right: 2px solid black;
     padding-inline-end: 4px;
-    animation: pulse 0.6s infinite alternate;
+    animation: anim 0.3s infinite alternate;
     min-height: 1rem;
 }
 
-@keyframes pulse {
+@keyframes anim {
     to {
         border-color: transparent;
     }
