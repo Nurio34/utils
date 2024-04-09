@@ -1,4 +1,4 @@
-import { useGlobalContext } from "../../../Pages/6-MarkdownBlog/GlobalApp";
+import { useGlobalContext } from "../../../GlobalApp";
 import { Moon, Sun } from "./assets/icons";
 import { motion } from "framer-motion";
 function ThemeChange() {
